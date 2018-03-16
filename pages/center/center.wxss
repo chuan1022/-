@@ -1,0 +1,27 @@
+/* pages/center/center.wxss */
+.container{
+  background-color: #dfdfdf;
+}
+.userInfo{
+   padding: 20px 0; 
+   text-align: center; 
+  background: #fff;
+  width: 100%;
+}
+
+.userInfo  text{
+  display: block;
+  margin: 20px 0; 
+}
+
+.tabs{
+  margin-top: 10px;
+  background: #fff;
+  padding: 0 10px;
+}
+.tabItem{
+  font-size: 15px;
+  line-height: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-left: 20px;
+}

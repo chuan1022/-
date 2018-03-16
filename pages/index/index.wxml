@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button bindtap='addDay'>添加好友生日</button>
+  </view>
+  <view>
+    <block wx:for="{{dataList}}">
+    
+      <view>
+          <text>{{item}}</text>
+      </view>
+    
+    </block>
+  </view>
+</view>

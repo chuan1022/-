@@ -1,0 +1,8 @@
+<!--pages/addIdea/addIdea.wxml-->
+<view class='box'>
+
+ <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="说说你的想法" name="idea"/>
+    <button form-type="submit"> 提交 </button>
+  </form>
+</view>

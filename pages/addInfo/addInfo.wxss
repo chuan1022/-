@@ -1,0 +1,24 @@
+/* pages/addInfo/addInfo.wxss */
+.formItem{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  font-size: 15px;
+  padding: 10px;
+  border-bottom: 1px dashed #ddd;
+}
+.formItem label{
+  min-width: 60px;
+}
+.formItem view{
+  font-size: 13px;
+  color: #666;
+}
+.btn-area{
+  text-align: center;
+  margin-top: 20px;
+}
+.btn-area button{
+  margin: 0 10px;
+}

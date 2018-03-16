@@ -1,0 +1,9 @@
+/**app.wxss**/
+text{
+  color: #696969;
+}
+.photoImg{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}

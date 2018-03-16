@@ -1,0 +1,46 @@
+<!--pages/addInfo/addInfo.wxml-->
+<view class='container'>
+  <view style='text-align:center'>
+    <image class='photoImg' src='{{info.photoURL}}'></image>
+  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='formItem'>
+      <label>
+        昵称:
+      </label>
+      <view>
+        <input name="nickName" type='text' placeholder='昵称' value='{{info.nickName}}'></input>
+      </view>
+    </view>
+    <view class='formItem'>
+     <label>
+        性别:
+      </label>
+      <view>
+        <radio-group name="sex">
+          <label><radio name="sex" value="1" checked='{{info.sex==1}}'>男</radio></label>
+          <label style='margin-left:20px'><radio name="sex" value='0' checked='{{info.sex==0}}'>女</radio></label>
+        </radio-group>
+      </view> 
+    </view>
+    <view class='formItem'>
+     <label>
+        生日:
+      </label>
+      <picker name="birthDay" mode="date" value='{{birthDay}}' start="1970-01-01" end="2017-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          {{birthDay}}
+        </view> 
+      </picker>
+    </view>
+    <view class='formItem'>
+     <label>
+        手机:
+      </label>
+      <input name="phone" type='text' placeholder='手机号' value='{{userInfo.phone}}'></input>
+    </view>
+    <view class="btn-area">
+      <button formType="submit" type='primary'>保存</button>
+    </view>
+  </form>
+</view>

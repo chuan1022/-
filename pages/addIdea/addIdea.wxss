@@ -1,0 +1,14 @@
+/* pages/addIdea/addIdea.wxss */
+
+.box{
+  padding: 20px;
+}
+textarea{
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding:10px;
+  color: #666;
+}
+button{
+  margin-top: 40px;
+}
