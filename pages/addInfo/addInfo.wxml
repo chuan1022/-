@@ -30,7 +30,7 @@
       </label>
       <picker name="birthDay" mode="date" value='{{userInfo[".value"]["birthDay"]}}' start="1970-01-01" end="2017-09-01" bindchange="bindDateChange">
         <view class="picker">
-          {{date}}
+          {{currentDate}}
         </view> 
       </picker>
     </view>

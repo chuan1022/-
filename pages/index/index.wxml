@@ -1,15 +1,20 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button bindtap='addDay'>添加好友生日</button>
-  </view>
+<view class="container" bindtouchstart="hideCardHandle">
+   <view class='addBtn' bindtap='addDay'>+</view> 
   <view>
-    <block wx:for="{{dataList}}">
-    
-      <view>
-          <text>{{item}}</text>
+     <block wx:for="{{friendsList}}" wx:key="{{index}}">
+      <view data-id="{{index}}" class='birthCard' bindlongpress="handleLongPress">
+          <image class='photoImg' src="{{item.sex!=undefined?photoFilter[item.sex]:photoFilter.defaultPhoto}}"></image>
+          <view class='info'>
+            <view class='friendName'><text>{{item.nickName}}</text></view>
+            <!-- <view ><text class='time'>{{item.currentBirthDayString}}</text></view> -->
+            <view >距离生日还有<text class='time'>{{item.lastDays}}</text>天</view>
+          </view>
       </view>
-    
     </block>
+    <view wx:if="{{showCardHandles}}" class="cardHandle" style="left:{{btnX}}px;top:{{btnY}}px">
+       <view bindtap="delFriendHandle">删除</view>
+       <view bindtap="editFriend">编辑</view>
+    </view>
   </view>
 </view>

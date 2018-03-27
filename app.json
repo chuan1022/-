@@ -18,12 +18,12 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "assets/icon/icon1-2.png",
-        "selectedIconPath": "assets/icon/icon1-1.png"
+        "iconPath": "assets/icon/icon1-1.png",
+        "selectedIconPath": "assets/icon/icon1-2.png"
       },
       {
         "pagePath": "pages/center/center",
-        "text": "我的世界",
+        "text": "我的",
         "iconPath": "assets/icon/icon2-1.png",
         "selectedIconPath": "assets/icon/icon2-2.png"
       }

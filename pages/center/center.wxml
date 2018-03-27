@@ -9,11 +9,11 @@
     <view class='tabItem' bindtap='addIdea'>
       <text>意见反馈</text>
     </view>
-     <view class='tabItem'>
+     <!-- <view class='tabItem'>
       <text>客服中心</text>
     </view>
      <view class='tabItem'>
       <text>意见反馈</text>
-    </view>
+    </view> -->
   </view>
 </view>

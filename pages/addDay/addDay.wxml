@@ -9,7 +9,7 @@
         昵称:
       </label>
       <view>
-        <input name="nickName" type='text' placeholder='昵称' value='{{info.nickName}}'></input>
+        <input  name="nickName" type='text' placeholder='昵称' value='{{info.nickName}}'></input>
       </view>
     </view>
     <view class='formItem'>

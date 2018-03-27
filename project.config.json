@@ -8,9 +8,9 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.91",
+	"libVersion": "1.9.93",
 	"appid": "wxbc262cf85e0e4d59",
-	"projectname": "wx-project",
+	"projectname": "birthBook",
 	"condition": {
 		"search": {
 			"current": -1,

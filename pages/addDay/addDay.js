@@ -6,32 +6,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    birthDay: '0000-00-00',
-    info:{
-      name:'',
-      sex:1,
-      phone:'',
-      photoURL:''
-    }
+    birthDay: '选择生日'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.setData({
-    //   date: wx.getStorageSync('birthDay') || '0000-00-00'
-    // })
-
-    // App.dogSync.ref('api/users/' + App.globalData.uid).bindAsObject(this, 'userInfo', (err) => {
-    //   if (err != null) {
-    //     // 数据绑定失败，失败原因：err.message;
-    //     console.log('err')
-    //   } else {
-    //     // 数据绑定成功
-    //     console.log('绑定成功')
-    //   }
-    // })
+    console.log(options)
+    this.setData({
+      type: options.type
+    })
+    if(options.type=='add'){
+       //添加新生日
+      
+    }else if(options.type=='edit'){
+      //编辑旧生日
+      
+    }
+  
   },
 
   /**
@@ -86,14 +79,32 @@ Page({
 
   },
   formSubmit(e) {
-    // console.log(this.data.info)
-    this.data.info['birthDay'] = this.data.birthDay
-    App.$API.addFriend(App.dogSync, wx.getStorageSync('uid'), this.data.info , res => {
-      console.log(res)
+    if (this.data.type=='add'){
+      this.addFriend(e.detail.value)
+    }else{
+      
+    }
+  },
+
+  //add
+  addFriend(para){
+    App.$API.addFriend(wx.getStorageSync('uid'), para, res => {
+      wx.showToast({
+        title: '添加成功',
+        icon: 'success'
+      })
+      setTimeout(()=>{
+        wx.navigateBack({
+          url:'?update=true'
+        })
+      },1500)
     })
   },
+  //edit
+  editFriend() {
+   
+  },
   bindDateChange: function (e) {
-    console.log(this.userInfo)
     this.setData({
       birthDay: e.detail.value
     })

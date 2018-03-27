@@ -14,7 +14,7 @@ Page({
       idea: e.detail.value.idea,
       uid: wx.getStorageSync('uid')
     }
-    App.$API.addIdea(App.dogSync, data.uid,data,(res)=>{
+    App.$API.addIdea(data.uid,data,(res)=>{
       wx.showToast({
         icn:'success',
         title:'谢谢你的反馈'

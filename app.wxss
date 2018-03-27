@@ -1,6 +1,10 @@
 /**app.wxss**/
-text{
-  color: #696969;
+page{
+  min-height: 100%;
+}
+
+.container{
+  height: 100%;
 }
 .photoImg{
   width: 100px;

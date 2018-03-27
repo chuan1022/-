@@ -1,4 +1,21 @@
 /**index.wxss**/
+.container{
+  background: #dfdfdf;
+}
+.addBtn{
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  background: #EA7D28;
+  bottom: 30rpx;
+  right: 30rpx;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  line-height: 90rpx;
+  font-size: 70rpx;
+  font-weight: bold; 
+}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -18,4 +35,51 @@
 
 .usermotto {
   margin-top: 200px;
+}
+
+/* 生日卡 */
+.birthCard{
+  background-color: #fff;
+  margin-bottom: 10rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex: 1;
+  align-items: center;
+  padding: 30rpx 0 30rpx 40rpx;
+  background: './assets/images/bg1.jpg';
+}
+.birthCard:hover{
+  background-color: #dfdfdf;
+}
+.birthCard .info{
+  margin-left: 40rpx;
+  color: #aaa;
+}
+.birthCard image{
+  width: 120rpx;
+  height:120rpx;
+}
+.time{
+  color: #EA7D28;
+  font-size: 50rpx;
+}
+.friendName{
+  color: #aaa;
+}
+.cardHandle{
+  position: fixed;
+  background: #fff;
+  padding: 30rpx;
+  border: 1px solid #dfdfdf;
+  box-shadow: 0px 0px 4px #aaa;
+}
+.cardHandle view{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #dfdfdf;
+  
+}
+.cardHandle view:nth-last-of-type(1){
+   border-bottom: none;
 }

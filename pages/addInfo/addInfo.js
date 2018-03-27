@@ -6,17 +6,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-    date:''
+    currentDate:'选择生日'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      date: wx.getStorageSync('birthDay') || '0000-00-00'
+    //单独获取生日
+    App.dogSync.ref('api/users/' + App.globalData.uid+'/birthDay').once('value').then(res=>{
+      this.setData({
+        currentDate: res.val()||'选择生日'
+      })
     })
-    
+    //绑定个人信息
     App.dogSync.ref('api/users/' + App.globalData.uid).bindAsObject(this, 'userInfo',  (err)=> {
       if (err != null) {
         // 数据绑定失败，失败原因：err.message;
@@ -80,18 +83,14 @@ Page({
 
   },
   formSubmit(e){
-    App.$API.updateUserInfo(App.dogSync, wx.getStorageSync('uid'), e.detail.value,res=>{
-      App.$API.getUserInfo(App.dogSync, wx.getStorageSync('uid'), (res) => {
-        App.globalData.userInfo = res.val()
-        wx.navigateBack()
-      })
+    App.$API.updateUserInfo(wx.getStorageSync('uid'), e.detail.value,res=>{
+      App.globalData.userInfo = e.detail.value
+      wx.navigateBack()
     })
   },
   bindDateChange: function (e) {
-    console.log(this.userInfo)
     this.setData({
-      date: e.detail.value
+      currentDate: e.detail.value
     })
-    wx.setStorageSync('birthDay', e.detail.value)
   },
 })
