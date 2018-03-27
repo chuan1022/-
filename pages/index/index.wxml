@@ -4,10 +4,10 @@
   <view>
      <block wx:for="{{friendsList}}" wx:key="{{index}}">
       <view data-id="{{index}}" class='birthCard' bindlongpress="handleLongPress">
+          <image class='bgImg' src='../../assets/images/bg1.jpg'></image>
           <image class='photoImg' src="{{item.sex!=undefined?photoFilter[item.sex]:photoFilter.defaultPhoto}}"></image>
           <view class='info'>
             <view class='friendName'><text>{{item.nickName}}</text></view>
-            <!-- <view ><text class='time'>{{item.currentBirthDayString}}</text></view> -->
             <view >距离生日还有<text class='time'>{{item.lastDays}}</text>天</view>
           </view>
       </view>

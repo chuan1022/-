@@ -1,6 +1,6 @@
 /**index.wxss**/
 .container{
-  background: #dfdfdf;
+  
 }
 .addBtn{
   position: fixed;
@@ -29,10 +29,6 @@
   border-radius: 50%;
 }
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
 .usermotto {
   margin-top: 200px;
 }
@@ -46,27 +42,33 @@
   flex-wrap: nowrap;
   flex: 1;
   align-items: center;
-  padding: 30rpx 0 30rpx 40rpx;
-  background: './assets/images/bg1.jpg';
+  position: relative;
+  overflow: hidden;
 }
 .birthCard:hover{
   background-color: #dfdfdf;
 }
 .birthCard .info{
   margin-left: 40rpx;
-  color: #aaa;
+  color: #666;
+  margin: 20px;
+   z-index: 99;
 }
-.birthCard image{
+.birthCard .photoImg{
   width: 120rpx;
   height:120rpx;
+  margin-left: 20px;
+  z-index: 99;
+}
+.birthCard .bgImg{
+  position: absolute;
+  width: 100%;
 }
 .time{
   color: #EA7D28;
   font-size: 50rpx;
 }
-.friendName{
-  color: #aaa;
-}
+
 .cardHandle{
   position: fixed;
   background: #fff;

@@ -5,15 +5,14 @@
     <text>你好，{{userInfo[".value"]["nickName"]?userInfo[".value"]["nickName"]:userInfo[".value"]["displayName"]}}</text>
     <button size='mini' type='primary' bindtap='addUserInfo'>编辑个人信息</button>
   </view>
-  <view class='tabs'>
-    <view class='tabItem' bindtap='addIdea'>
-      <text>意见反馈</text>
-    </view>
-     <!-- <view class='tabItem'>
-      <text>客服中心</text>
-    </view>
-     <view class='tabItem'>
-      <text>意见反馈</text>
-    </view> -->
+  <view class="weui-cells weui-cells_after-title">
+    <navigator url="../addIdea/addIdea" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">意见反馈</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="../addIdea/addIdea" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">联系客服</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
   </view>
 </view>

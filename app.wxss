@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import 'style/weui.wxss';
 page{
   min-height: 100%;
 }
